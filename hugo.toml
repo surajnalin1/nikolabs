@@ -5,7 +5,7 @@ enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term']
 
 [params]
-description = 'Nikolabs builds thoughtful mobile, web, and AI-powered apps.'
+description = 'Nikolabs designs, builds, and launches its own mobile, web, and AI-powered apps.'
 
 [menu]
   [[menu.main]]
@@ -15,9 +15,9 @@ description = 'Nikolabs builds thoughtful mobile, web, and AI-powered apps.'
   weight = 1
 
   [[menu.main]]
-  identifier = 'services'
-  name = 'Services'
-  url = '/services/'
+  identifier = 'apps'
+  name = 'Apps'
+  url = '/apps/'
   weight = 2
 
   [[menu.main]]
