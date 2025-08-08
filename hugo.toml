@@ -2,10 +2,11 @@ baseURL = 'https://nikolabs.ai/'
 languageCode = 'en-us'
 title = 'Nikolabs'
 enableRobotsTXT = true
-disableKinds = ['taxonomy', 'term']
+disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
 
 [params]
-description = 'Nikolabs designs, builds, and launches its own mobile, web, and AI-powered apps.'
+description = 'We build apps.'
+noindex = true
 
 [menu]
   [[menu.main]]
@@ -14,23 +15,15 @@ description = 'Nikolabs designs, builds, and launches its own mobile, web, and A
   url = '/'
   weight = 1
 
-  [[menu.main]]
-  identifier = 'apps'
-  name = 'Apps'
-  url = '/apps/'
-  weight = 2
+  # Stealth mode: keep navigation minimal
 
-  [[menu.main]]
-  identifier = 'about'
-  name = 'About'
-  url = '/about/'
-  weight = 3
+  # About page exists but is hidden from the main menu in stealth mode
 
   [[menu.main]]
   identifier = 'contact'
   name = 'Contact'
   url = '/contact/'
-  weight = 4
+  weight = 2
 
 [markup]
   [markup.goldmark]
