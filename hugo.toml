@@ -1,0 +1,41 @@
+baseURL = 'https://nikolabs.ai/'
+languageCode = 'en-us'
+title = 'Nikolabs'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+
+[params]
+description = 'Nikolabs builds thoughtful mobile, web, and AI-powered apps.'
+
+[menu]
+  [[menu.main]]
+  identifier = 'home'
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+  [[menu.main]]
+  identifier = 'services'
+  name = 'Services'
+  url = '/services/'
+  weight = 2
+
+  [[menu.main]]
+  identifier = 'about'
+  name = 'About'
+  url = '/about/'
+  weight = 3
+
+  [[menu.main]]
+  identifier = 'contact'
+  name = 'Contact'
+  url = '/contact/'
+  weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[pagination]
+  pagerSize = 10

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ if .Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">Nikolabs</a>
+        <nav class="nav">
+          {{ $current := . }}
+          {{ range .Site.Menus.main }}
+            <a class="nav-link{{ if $current.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+        </nav>
+      </div>
+    </header>
+    <main class="site-main">
+      <div class="container">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© {{ now.Format "2006" }} Nikolabs. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  </html>
+
+
